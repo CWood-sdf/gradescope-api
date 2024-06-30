@@ -3,7 +3,7 @@ const puppeteer = require("puppeteer");
 dotenv.config();
 
 async function scrapeGradescope() {
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
     await page.goto("https://www.gradescope.com/login");
     await page.screenshot({ path: "example.png" });
